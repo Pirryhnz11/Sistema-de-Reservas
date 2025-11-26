@@ -1,18 +1,16 @@
-// Clase padre Usuario
 public class Usuario {
-    // Atributos privados
+    
     private String nombre;
     private String id;
     private String email;
     
-    // Constructor
+    
     public Usuario(String nombre, String id, String email) {
         this.nombre = nombre;
         this.id = id;
         this.email = email;
     }
     
-    // Getters y Setters
     public String getNombre() {
         return nombre;
     }
@@ -37,7 +35,6 @@ public class Usuario {
         this.email = email;
     }
     
-    // Método para mostrar información del usuario
     public void mostrarInformacion() {
         System.out.println("INFORMACIÓN DEL USUARIO");
         System.out.println("Nombre: " + nombre);
@@ -45,7 +42,6 @@ public class Usuario {
         System.out.println("Email: " + email);
     }
     
-    // Sobrescribir toString()
     @Override
     public String toString() {
         return "Usuario: " + nombre + " (ID: " + id + ")";

@@ -3,7 +3,6 @@ public class Main {
         System.out.println("SISTEMA DE RESERVAS");
 
         
-        // 1. CREAR USUARIOS (Estudiantes y Profesores)
         
         Estudiante estudiante1 = new Estudiante(
             "mateo tabares", 
@@ -25,8 +24,7 @@ public class Main {
             "juan.perez@universidad.edu", 
             "Ingeniería"
         );
-        
-        // Mostrar información de los usuarios
+    
         estudiante1.mostrarInformacion();
         System.out.println();
         
@@ -36,11 +34,11 @@ public class Main {
         profesor1.mostrarInformacion();
         System.out.println();
         
-        // Probar métodos propios de las clases hijas
+
         estudiante1.solicitarProrroga();
         profesor1.reservarConPrioridad();
         
-        // 2. CREAR RECURSOS
+        
         
         Recurso sala1 = new Recurso(
             "Sala de Estudio A", 
@@ -63,7 +61,7 @@ public class Main {
             1
         );
         
-        // Mostrar información de los recursos
+        
         sala1.mostrarInformacion();
         System.out.println();
         
@@ -72,11 +70,10 @@ public class Main {
         
         equipo1.mostrarInformacion();
         
-        // 3. CREAR SISTEMA DE RESERVAS
+
         
         SistemaReservas sistema = new SistemaReservas("Sistema de Reservas  ");
         
-        // 4. CREAR RESERVAS
         
         Reserva reserva1 = new Reserva(
             estudiante1, 
@@ -102,24 +99,24 @@ public class Main {
             "10:00"
         );
         
-        // 5. AGREGAR RESERVAS AL SISTEMA
+        
         sistema.agregarReserva(reserva1);
         sistema.agregarReserva(reserva2);
         sistema.agregarReserva(reserva3);
         
-        // 6. MOSTRAR TODAS LAS RESERVAS
+
         sistema.mostrarTodasLasReservas();
         
-        // 7. BUSCAR RESERVAS POR USUARIO
+        
         sistema.buscarReservasPorUsuario("mateo tabares");
         
-        // 8. PRUEBA DE toString()
+        
         System.out.println(estudiante1.toString());
         System.out.println(profesor1.toString());
         System.out.println(sala1.toString());
         System.out.println(reserva1.toString());
         
-        // 9. RESUMEN FINAL
+        
     
         System.out.println("Total de reservas en el sistema: " + 
                          sistema.obtenerTotalReservas());

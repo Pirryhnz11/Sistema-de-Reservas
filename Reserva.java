@@ -1,13 +1,10 @@
-// Clase Reserva que relaciona Usuario con Recurso
 public class Reserva {
-    // Atributos privados
     private Usuario usuario;
     private Recurso recurso;
     private String fecha;
     private String horaInicio;
     private String horaFin;
     
-    // Constructor
     public Reserva(Usuario usuario, Recurso recurso, String fecha, 
                    String horaInicio, String horaFin) {
         this.usuario = usuario;
@@ -17,7 +14,6 @@ public class Reserva {
         this.horaFin = horaFin;
     }
     
-    // Getters y Setters
     public Usuario getUsuario() {
         return usuario;
     }
@@ -58,7 +54,6 @@ public class Reserva {
         this.horaFin = horaFin;
     }
     
-    // Método para mostrar información de la reserva
     public void mostrarInformacion() {
         System.out.println("INFORMACIÓN DE LA RESERVA");
 
@@ -68,7 +63,6 @@ public class Reserva {
         System.out.println("Horario: " + horaInicio + " - " + horaFin);
     }
     
-    // Sobrescribir toString()
     @Override
     public String toString() {
         return "Reserva de " + usuario.getNombre() + 

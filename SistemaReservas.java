@@ -1,24 +1,22 @@
 import java.util.ArrayList;
 
-// Clase para gestionar múltiples reservas usando ArrayList
 public class SistemaReservas {
-    // ArrayList para guardar todas las reservas
+    
     private ArrayList<Reserva> listaReservas;
     private String nombreSistema;
     
-    // Constructor
+    
     public SistemaReservas(String nombreSistema) {
         this.nombreSistema = nombreSistema;
         this.listaReservas = new ArrayList<>();
     }
     
-    // Método para agregar una reserva
     public void agregarReserva(Reserva reserva) {
         listaReservas.add(reserva);
         System.out.println("Reserva agregada exitosamente al sistema.");
     }
     
-    // Método para mostrar todas las reservas
+    
     public void mostrarTodasLasReservas() {
         System.out.println( nombreSistema.toUpperCase());
         System.out.println("Total de reservas: " + listaReservas.size());
@@ -33,7 +31,7 @@ public class SistemaReservas {
         }
     }
     
-    // Método para buscar reservas por usuario
+    
     public void buscarReservasPorUsuario(String nombreUsuario) {
         System.out.println("\n Buscando reservas de: " + nombreUsuario);
         boolean encontrado = false;
@@ -50,12 +48,10 @@ public class SistemaReservas {
         }
     }
     
-    // Método para obtener el número de reservas
     public int obtenerTotalReservas() {
         return listaReservas.size();
     }
     
-    // Getter para la lista de reservas
     public ArrayList<Reserva> getListaReservas() {
         return listaReservas;
     }
